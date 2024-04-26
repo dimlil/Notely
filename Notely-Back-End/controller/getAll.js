@@ -1,5 +1,4 @@
-import { PrismaClient } from "@prisma/client";
-const prisma = new PrismaClient();
+import { prisma } from "../prisma/prismaClientInit.js";
 
 export const getAllNotes = async (req, res) => {
     try {
