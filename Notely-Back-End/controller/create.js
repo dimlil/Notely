@@ -10,6 +10,9 @@ export const createNote = async (req, res) => {
                 timestamps: new Date()
             },
         });
+        if(note){
+            res.json('Note created successfully');
+        }
     } catch (error) {
         console.log(error);
     }
