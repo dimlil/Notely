@@ -3,6 +3,7 @@ import App from './components/home/App';
 import Header from './components/header/Header';
 import RegisterPage from './pages/register/RegisterPage.jsx';
 import LoginPage from './pages/login/LoginPage.jsx';
+import CreatePage from './pages/create/CreatePage.jsx';
 
 function Navigation() {
     return (
@@ -12,6 +13,7 @@ function Navigation() {
                 <Route path="/" element={<App />} />
                 <Route path="/register" element={<RegisterPage />} />
                 <Route path="/login" element={<LoginPage />} />
+                <Route path="/create" element={<CreatePage />} />
             </Routes>
         </>
     )
