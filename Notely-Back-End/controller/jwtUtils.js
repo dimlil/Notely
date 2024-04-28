@@ -5,8 +5,7 @@ export const generateToken = (data) => {
     return token;
 }
 export const verifyUser = async (req, res, next) => {
-    const { token } = req.session;
-    
+    const { token } = req.body;
     try {
         jwt.verify(token, process.env.PRIVATE_KEY);
         req.isLoggedIn = true;

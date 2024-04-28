@@ -1,9 +1,17 @@
 import styles from './Header.module.scss';
 import logo from '../../assets/logo.png';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import checkAuth from '../../services/checkAuth';
 
 function Header() {
-
+  let location = useLocation();
+  const [auth, setAuth] = useState(false);
+  useEffect(() => {
+    checkAuth().then((result) => {
+      setAuth(result.isLoggedIn)
+    })
+  },[location])
   return (
     <>
       <header>
@@ -13,8 +21,17 @@ function Header() {
 
 
         <nav>
-          <Link to="/login">Login</Link>
-          <Link to="/register">Register</Link>
+          { auth == false ? 
+          <>
+            <Link to="/login">Login</Link>
+            <Link to="/register">Register</Link>
+          </>
+          :
+            <>
+              <Link to="/create">Create</Link>
+            </>
+          }
+          
         </nav>
       </header>
     </>
