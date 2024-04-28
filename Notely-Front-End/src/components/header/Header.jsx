@@ -22,7 +22,7 @@ function Header() {
   }
   return (
     <>
-      <header>
+      <header className={styles.header}>
         <Link to="/">
           <img src={logo} alt="logo" />
         </Link>
