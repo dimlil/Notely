@@ -19,6 +19,7 @@ export const register = async (name, email, password, rePassword) => {
             password
         }, { withCredentials: true });
         localStorage.setItem('token', response.data.token)
+        localStorage.setItem('userId', response.data.userId)
         return 'User Is Successfuly Register'
     } catch (error) {
         if (error) {

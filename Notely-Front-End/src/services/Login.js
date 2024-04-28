@@ -15,6 +15,7 @@ export const login = async (email, password) => {
             password
         }, { withCredentials: true });
         localStorage.setItem('token', response.data.token)
+        localStorage.setItem('userId', response.data.userId)
         return true
     } catch (error) {
         if (error) {
