@@ -2,13 +2,14 @@ body{
     margin: 0;
     font-family: "Poppins", sans-serif;
     background-color: #e5a40d;
-
-    main{
-        margin: 0 auto;
-        max-width: 90%;
-        margin-top: 1rem;
-        @media screen and (min-width: 1200px) {
-            max-width: 1170px;
+    .routes{
+        main{
+            margin: 0 auto;
+            max-width: 90%;
+            margin-top: 1rem;
+            @media screen and (min-width: 1200px) {
+                max-width: 1170px;
+            }
         }
     }
 }

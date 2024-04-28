@@ -8,6 +8,7 @@ import DetailsPage from './pages/details/DetailsPage.jsx';
 import EditPage from './pages/edit/EditPage.jsx';
 import checkAuth from './services/checkAuth.js';
 import { useEffect, useState } from 'react';
+import style from './assets/main.module.css'
 
 function Navigation() {
     let location = useLocation();
@@ -20,7 +21,7 @@ function Navigation() {
     return (
         <>
             <Header />
-            <Routes >
+            <Routes className={style.routes}>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/register" element={!auth ? <RegisterPage /> : <HomePage />} />
                 <Route path="/login" element={!auth ? <LoginPage /> : <HomePage />} />
