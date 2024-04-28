@@ -1,1 +1,1 @@
-.notesWrapper{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit, minmax(300px, 1fr))}
+.notesWrapper{display:grid;gap:1rem;justify-content:center}@media screen and (min-width: 768px){.notesWrapper{grid-template-columns:repeat(auto-fit, minmax(30%, 1fr))}}@media screen and (min-width: 1200px){.notesWrapper{grid-template-columns:repeat(auto-fit, minmax(280px, 1fr))}}
