@@ -5,6 +5,7 @@ import RegisterPage from './pages/register/RegisterPage.jsx';
 import LoginPage from './pages/login/LoginPage.jsx';
 import CreatePage from './pages/create/CreatePage.jsx';
 import DetailsPage from './pages/details/DetailsPage.jsx';
+import EditPage from './pages/edit/EditPage.jsx';
 
 function Navigation() {
     return (
@@ -16,6 +17,7 @@ function Navigation() {
                 <Route path="/login" element={<LoginPage />} />
                 <Route path="/create" element={<CreatePage />} />
                 <Route path="/note/:id" element={<DetailsPage />} />
+                <Route path="/edit/:id" element={<EditPage />} />
             </Routes>
         </>
     )

@@ -3,6 +3,7 @@ import { createNote } from "../controller/create.js";
 import { getAllNotes } from "../controller/getAllNotes.js";
 import { getNote } from "../controller/getNote.js";
 import { deleteNote } from "../controller/delete.js";
+import { editNote } from "../controller/edit.js";
 
 const router = new Router();
 
@@ -20,6 +21,9 @@ router.get('/getNote/:id',(req,res)=>{
 })
 router.delete('/delete/:id',(req,res)=>{
     deleteNote(req,res)
+})
+router.put('/edit/:id',(req,res)=>{
+    editNote(req,res)
 })
 
 export { router as indexRoute }
