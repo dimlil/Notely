@@ -1,0 +1,24 @@
+.noteWrapper{
+    background-color: #fdf5e3;
+    box-shadow: 0 5px 10px rgb(23, 23, 23);
+    border-radius: 20px;
+    padding: 10px 1rem;
+    .actions{
+        display: flex;
+        gap: 1rem;
+        a,button{
+            text-decoration: none;
+            color: #e5a40d;
+            font-weight: bold;
+            font-size: 15px;
+            background-color: #00215E;
+            padding: 10px 1rem;
+            border-radius: 20px;
+        }
+        .delete{
+            background-color: #8c0000;
+            border: none;
+            cursor: pointer;
+        }
+    }
+}
