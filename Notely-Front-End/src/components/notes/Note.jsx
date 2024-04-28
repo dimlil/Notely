@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import styles from './Note.module.scss'
+import styles from './Note.module.css'
 function Note(props) {
     return (
         <div className={styles.noteWrapper}>

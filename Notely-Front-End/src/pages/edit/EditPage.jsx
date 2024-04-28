@@ -1,6 +1,6 @@
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
-import styles from './edit.module.scss'
+import styles from './edit.module.css'
 import getNote from '../../services/getNote.js';
 import { editNote } from '../../services/edit.js';
 

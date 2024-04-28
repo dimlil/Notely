@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import styles from './DetailsPage.module.scss'
+import styles from './DetailsPage.module.css'
 import getNote from '../../services/getNote.js';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { deleteNote } from '../../services/deleteNote.js';

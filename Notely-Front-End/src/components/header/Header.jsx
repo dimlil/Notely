@@ -1,4 +1,4 @@
-import styles from './Header.module.scss';
+import styles from './Header.module.css';
 import logo from '../../assets/logo.png';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';

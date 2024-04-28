@@ -1,6 +1,6 @@
 import { Link, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
-import styles from './create.module.scss'
+import styles from './create.module.css'
 import { create } from '../../services/Create.js';
 
 export default function CreatePage() {
