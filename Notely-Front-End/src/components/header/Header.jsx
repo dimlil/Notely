@@ -9,9 +9,9 @@ function Header() {
   const [auth, setAuth] = useState(false);
   useEffect(() => {
     checkAuth().then((result) => {
-      setAuth(result.isLoggedIn)
+      setAuth(result)
     })
-  },[location])
+  }, [location])
   return (
     <>
       <header>
@@ -21,17 +21,17 @@ function Header() {
 
 
         <nav>
-          { auth == false ? 
-          <>
-            <Link to="/login">Login</Link>
-            <Link to="/register">Register</Link>
-          </>
-          :
+          {auth ?
             <>
               <Link to="/create">Create</Link>
             </>
+            :
+            <>
+              <Link to="/login">Login</Link>
+              <Link to="/register">Register</Link>
+            </>
           }
-          
+
         </nav>
       </header>
     </>
