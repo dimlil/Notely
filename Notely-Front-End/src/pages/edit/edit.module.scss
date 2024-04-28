@@ -39,3 +39,55 @@
         }
     }
 }
+
+.errorContainer {
+    position: fixed;
+    right: 10px;
+    min-width: 100px;
+    display: block;
+    z-index: 11111;
+    top: 55px;
+    text-align: center;
+    border-radius: 0.5rem;
+    color: rgb(255, 255, 255);
+    font-style: italic;
+    height: auto;
+    box-shadow: 0 5px 10px rgb(204, 204, 204);
+    padding: 1rem;
+
+    -moz-animation: cssAnimation 0s ease-in 2s forwards;
+    /* Firefox */
+    -webkit-animation: cssAnimation 0s ease-in 2s forwards;
+    /* Safari and Chrome */
+    -o-animation: cssAnimation 0s ease-in 2s forwards;
+    /* Opera */
+    animation: cssAnimation 0s ease-in 2s forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    p {
+        background: #F50;
+        font-size: 23px;
+        padding: 20px;
+        height: auto;
+        margin-bottom: 0;
+      }
+
+      @keyframes cssAnimation {
+        to {
+            width: 0;
+            height: 0;
+            overflow: hidden;
+            padding: 0;
+        }
+      }
+      
+      @-webkit-keyframes cssAnimation {
+        to {
+            width: 0;
+            height: 0;
+            visibility: hidden;
+            padding: 0;
+        }
+      }
+      
+  }

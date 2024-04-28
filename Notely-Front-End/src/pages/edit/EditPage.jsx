@@ -9,6 +9,7 @@ export default function EditPage() {
   const id = useParams().id;
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
+  const [errors, setErrors] = useState('');
 
   const updatingTitle = (e) => {
     setTitle(e.target.value);
@@ -27,15 +28,22 @@ export default function EditPage() {
 
   const formHanldler = async (e) => {
     e.preventDefault();
-    const result = await editNote(title, content,id);
-    if (result) {
+    setErrors();
+    const result = await editNote(title, content, id);
+    if (result.status === 200) {
       navigate('/note/' + id);
     }
     else {
+      setErrors(result)
     }
   }
   return (
     <>
+      {errors ? <div>
+        <div className={styles.errorContainer}>
+          <p>{errors}</p>
+        </div>
+      </div> : <></>}
       <form action="" className={styles.editForm}>
         <h2>
           Create
