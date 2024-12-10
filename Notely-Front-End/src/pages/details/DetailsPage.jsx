@@ -6,7 +6,7 @@ import { deleteNote } from '../../services/deleteNote.js';
 
 function DetailsPage() {
   let navigate = useNavigate();
-  const [note, setNote] = useState([]);
+  const [note, setNote] = useState();
   const { id } = useParams();
   useEffect(() => {
     getNote(id).then((result) => {
